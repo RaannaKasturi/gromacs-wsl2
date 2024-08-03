@@ -1,2 +1,2 @@
-# gromacs-wsl2
-Install Gromacs on WSL2
+# Gromacs WSL2
+Install Gromacs on WSL2 in simple steps
