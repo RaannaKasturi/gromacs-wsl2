@@ -94,8 +94,8 @@ pipx install gmxvg --include-deps
   - FOR CPU SYSTEMS
   ```
   mkdir gromacs && cd gromacs
-  wget<link>
-  dpkg -i <file>
+  wget https://github.com/RaannaKasturi/gromacs-wsl2/blob/main/gromacs-2024.2-Linux-amd64-x86_64-CPU-edition.deb
+  dpkg -i gromacs-2024.2-Linux-amd64-x86_64-CPU-edition.deb
   ```
 ## Remove downloaded files to save space
 ```
