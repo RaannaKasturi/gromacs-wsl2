@@ -2,8 +2,8 @@
 Install Gromacs on WSL2 in simple steps
 
 ##There are two methosa for this
-1. [Method 1: Source Code Building & Installation of Gromacs](#method-1-source-code-building--installation-of-gromacs)
-2. [Method 2: DEB Package Installation of Gromacs](#method-2-deb-package-installation-of-gromacs)
+1. [Method 1: Source Code Building & Installation of Gromacs](#method-1-source-code-building--installation-of-gromacs) (Hard process & technical knowledge needed)
+2. [Method 2: DEB Package Installation of Gromacs](#method-2-deb-package-installation-of-gromacs) (Easy process & no technical knowledge needed)
 
 # Method 1: Source Code Building & Installation of Gromacs
 ## Setting up the environment
