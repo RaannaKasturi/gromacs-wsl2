@@ -64,7 +64,7 @@ source ~/.bashrc
 ```
 ## Remove downloaded files to save space
 ```
-sudo cd ../../ && rm -rf gromacs*
+sudo cd ../../../ && rm -rf gromacs*
 ```
 ## Check Gromacs installation and version
 ```
