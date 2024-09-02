@@ -12,10 +12,17 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install libfftw3-mpi-dev python3-pip pipx -y
 sudo apt install build-essential doxygen  -y 
 sudo apt-get install openmpi-bin openmpi-doc libopenmpi-dev -y
+sudo apt install g++ make -y
 pipx install sphinx --include-deps
 pipx install gmxvg --include-deps
 ```
-## Downloading Gromacs 2024.2
+## Downloading and Installing CMAKE [In a new WSL2 terminal]
+```
+mkdir cmake && cd cmake
+wget -O cmake.tar.gz https://github.com/Kitware/CMake/releases/download/v3.30.3/cmake-3.30.3-linux-x86_64.sh
+sudo sh cmake.sh --prefix=/usr/local/ --exclude-subdir
+```
+## Downloading Gromacs 2024.2 [In a new WSL2 terminal]
 ```
 mkdir gromacs && cd gromacs
 wget -O gromacs.tar.gz https://ftp.gromacs.org/gromacs/gromacs-2024.2.tar.gz
