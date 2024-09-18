@@ -21,22 +21,23 @@ pipx install gmxvg --include-deps
 ## Downloading and Installing CMAKE [In a new WSL2 terminal]
 ```
 mkdir cmake && cd cmake
-wget -O cmake.tar.gz https://github.com/Kitware/CMake/releases/download/v3.30.3/cmake-3.30.3-linux-x86_64.sh
+wget -O cmake.sh https://github.com/Kitware/CMake/releases/download/v3.30.3/cmake-3.30.3-linux-x86_64.sh
 sudo sh cmake.sh --prefix=/usr/local/ --exclude-subdir
+cd .. && rm -rf cmake
 ```
 ## Downloading Gromacs 2024.2 [In a new WSL2 terminal]
 ```
 mkdir gromacs && cd gromacs
-wget -O gromacs.tar.gz https://ftp.gromacs.org/gromacs/gromacs-2024.2.tar.gz
+wget -O gromacs.tar.gz https://ftp.gromacs.org/gromacs/gromacs-2024.3.tar.gz
 tar xvfz gromacs.tar.gz
-cd gromacs-2024.2
+cd gromacs-2024.3
 ```
 ## Creating build directory
 ```
 mkdir build && cd build
 ```
 ## Building Gromacs
-  - FOR GPU SYSTEMS
+  - FOR NVIDEA GPU SYSTEMS
   ```
   cmake .. -DGMX_BUILD_OWN_FFTW=ON -DREGRESSIONTEST_DOWNLOAD=ON -DGMX_GPU=CUDA
   make -j$(nproc)
@@ -73,7 +74,7 @@ source ~/.bashrc
 ```
 ## Remove downloaded files to save space
 ```
-sudo cd ../../../ && rm -rf gromacs*
+cd ../../../ && sudo rm -rf gromacs*
 ```
 ## Check Gromacs installation and version
 ```
