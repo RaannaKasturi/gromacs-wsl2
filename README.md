@@ -78,7 +78,7 @@ cd ../../../ && sudo rm -rf gromacs*
 ```
 ## Check Gromacs installation and version
 ```
-gmx -V
+gmx -version
 ```
 [Installed Successfully, the latest version available (2024.2)]
 
