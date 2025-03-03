@@ -8,7 +8,7 @@ Install Gromacs on WSL2 in simple steps
 ## Setting up the environment
 ```
 sudo apt update && sudo apt upgrade -y
-sudo apt install libfftw3-mpi-dev python3-pip pipx -y
+sudo apt install libfftw3-mpi-dev python3-pip -y
 sudo apt install build-essential doxygen  -y 
 sudo apt-get install openmpi-bin openmpi-doc libopenmpi-dev -y
 sudo apt-get install grace -y
