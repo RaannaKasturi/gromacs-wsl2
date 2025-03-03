@@ -8,38 +8,31 @@ Install Gromacs on WSL2 in simple steps
 ## Setting up the environment
 ```
 sudo apt update && sudo apt upgrade -y
-sudo add-apt-repository ppa:ubuntu-toolchain-r/test
-sudo apt update -y
-sudo apt install software-properties-common -y 
 sudo apt install libfftw3-mpi-dev python3-pip pipx -y
 sudo apt install build-essential doxygen  -y 
 sudo apt-get install openmpi-bin openmpi-doc libopenmpi-dev -y
 sudo apt-get install grace -y
-sudo apt install make -y
+sudo apt install g++ make -y
 pip install sphinx
+pipx install sphinx --include-deps
 pip install gmxvg
-```
-## Setup GCC & G++
-```
-sudo apt install build-essential manpages-dev software-properties-common
-sudo add-apt-repository ppa:ubuntu-toolchain-r/test
-sudo apt update && sudo apt install gcc-11 g++-11
+pipx install gmxvg --include-deps
 ```
 ## Setup CUDA for NVIDIA Processors
 [Setup CUDA for Nvidia](https://raannakasturi.substack.com/p/boost-your-wsl2-with-cuda)
 ## Downloading and Installing CMAKE [In a new WSL2 terminal]
 ```
 mkdir cmake && cd cmake
-wget -O cmake.sh https://github.com/Kitware/CMake/releases/download/v3.31.6/cmake-3.31.6-linux-x86_64.sh
+wget -O cmake.sh https://github.com/Kitware/CMake/releases/download/v3.30.3/cmake-3.30.3-linux-x86_64.sh
 sudo sh cmake.sh --prefix=/usr/local/ --exclude-subdir
 cd .. && rm -rf cmake
 ```
 ## Downloading Gromacs 2024.2 [In a new WSL2 terminal]
 ```
 mkdir gromacs && cd gromacs
-wget -O gromacs.tar.gz https://ftp.gromacs.org/gromacs/gromacs-2025.0.tar.gz
+wget -O gromacs.tar.gz https://ftp.gromacs.org/gromacs/gromacs-2024.3.tar.gz
 tar xvfz gromacs.tar.gz
-cd gromacs-2025.0
+cd gromacs-2024.3
 ```
 ## Creating build directory
 ```
@@ -89,4 +82,4 @@ cd ../../../ && sudo rm -rf gromacs*
 ```
 gmx -version
 ```
-[Installed Successfully, the latest version available (2025.0)]
+[Installed Successfully, the latest version available (2024.3)]
