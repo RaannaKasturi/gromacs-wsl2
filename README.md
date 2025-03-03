@@ -18,6 +18,8 @@ pipx install sphinx --include-deps
 pip install gmxvg
 pipx install gmxvg --include-deps
 ```
+## Setup CUDA for NVIDIA Processors
+[Setup CUDA for Nvidia](https://raannakasturi.substack.com/p/boost-your-wsl2-with-cuda)
 ## Downloading and Installing CMAKE [In a new WSL2 terminal]
 ```
 mkdir cmake && cd cmake
