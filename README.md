@@ -23,16 +23,16 @@ pipx install gmxvg --include-deps
 ## Downloading and Installing CMAKE [In a new WSL2 terminal]
 ```
 mkdir cmake && cd cmake
-wget -O cmake.sh https://github.com/Kitware/CMake/releases/download/v3.30.3/cmake-3.30.3-linux-x86_64.sh
+wget -O cmake.sh https://github.com/Kitware/CMake/releases/download/v3.31.6/cmake-3.31.6-linux-x86_64.sh
 sudo sh cmake.sh --prefix=/usr/local/ --exclude-subdir
 cd .. && rm -rf cmake
 ```
 ## Downloading Gromacs 2024.2 [In a new WSL2 terminal]
 ```
 mkdir gromacs && cd gromacs
-wget -O gromacs.tar.gz https://ftp.gromacs.org/gromacs/gromacs-2024.3.tar.gz
+wget -O gromacs.tar.gz https://ftp.gromacs.org/gromacs/gromacs-2025.0.tar.gz
 tar xvfz gromacs.tar.gz
-cd gromacs-2024.3
+cd gromacs-2025.0
 ```
 ## Creating build directory
 ```
@@ -82,4 +82,4 @@ cd ../../../ && sudo rm -rf gromacs*
 ```
 gmx -version
 ```
-[Installed Successfully, the latest version available (2024.3)]
+[Installed Successfully, the latest version available (2025.0)]
