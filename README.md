@@ -14,11 +14,16 @@ sudo apt install software-properties-common -y
 sudo apt install libfftw3-mpi-dev python3-pip pipx -y
 sudo apt install build-essential doxygen  -y 
 sudo apt-get install openmpi-bin openmpi-doc libopenmpi-dev -y
-sudo apt install gcc-13 g++-13 -y
 sudo apt-get install grace -y
 sudo apt install g++ make -y
 pip install sphinx
 pip install gmxvg
+```
+## Setup GCC & G++
+```
+sudo apt install build-essential manpages-dev software-properties-common
+sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+sudo apt update && sudo apt install gcc-11 g++-11
 ```
 ## Setup CUDA for NVIDIA Processors
 [Setup CUDA for Nvidia](https://raannakasturi.substack.com/p/boost-your-wsl2-with-cuda)
