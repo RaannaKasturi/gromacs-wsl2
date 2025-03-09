@@ -20,9 +20,17 @@ pip install gmxvg
 [Setup CUDA for Nvidia](https://raannakasturi.substack.com/p/boost-your-wsl2-with-cuda)
 ## Downloading and Installing CMAKE [In a new WSL2 terminal]
 ```
-mkdir cmake && cd cmake
-wget -O cmake.sh https://github.com/Kitware/CMake/releases/download/v3.30.3/cmake-3.30.3-linux-x86_64.sh
-sudo sh cmake.sh --prefix=/usr/local/ --exclude-subdir
+sudo apt remove --purge --auto-remove cmake
+sudo apt update && sudo apt install -y software-properties-common lsb-release && sudo apt clean all
+sudo apt install build-essential libtool autoconf unzip wget -y
+sudo apt-get install libssl-dev -y
+wget https://github.com/Kitware/CMake/releases/download/v3.31.6/cmake-3.31.6.tar.gz
+tar -xvzf cmake-3.31.6.tar.gz
+cd cmake-3.31.6
+./bootstrap
+make -j$(nproc)
+sudo make install
+cmake --version
 cd .. && rm -rf cmake
 ```
 ## Downloading Gromacs 2024.2 [In a new WSL2 terminal]
