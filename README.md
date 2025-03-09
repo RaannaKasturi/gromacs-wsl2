@@ -37,9 +37,9 @@ cd .. && rm -rf cmake
 ## Downloading Gromacs 2024.2 [In a new WSL2 terminal]
 ```
 mkdir gromacs && cd gromacs
-wget -O gromacs.tar.gz https://ftp.gromacs.org/gromacs/gromacs-2024.3.tar.gz
+wget -O gromacs.tar.gz https://ftp.gromacs.org/gromacs/gromacs-2025.0.tar.gz
 tar xvfz gromacs.tar.gz
-cd gromacs-2024.3
+cd gromacs-2025.0
 ```
 ## Creating build directory
 ```
