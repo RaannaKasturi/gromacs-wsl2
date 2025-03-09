@@ -13,6 +13,7 @@ sudo apt install build-essential doxygen  -y
 sudo apt-get install openmpi-bin openmpi-doc libopenmpi-dev -y
 sudo apt-get install grace -y
 sudo apt install g++ make -y
+sudo apt install imagemagick -y
 pip install sphinx
 pip install gmxvg
 ```
